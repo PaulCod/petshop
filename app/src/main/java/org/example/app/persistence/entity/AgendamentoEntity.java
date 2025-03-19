@@ -2,6 +2,7 @@ package org.example.app.persistence.entity;
 
 import lombok.Data;
 
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 
@@ -11,5 +12,5 @@ public class AgendamentoEntity {
     private ServiceEntity serviceEntity;
     private CachorroEntity cachorroEntity;
     private String status;
-    private LocalDateTime date;
+    private Timestamp date;
 }

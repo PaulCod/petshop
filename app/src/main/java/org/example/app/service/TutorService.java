@@ -21,9 +21,9 @@ public class TutorService {
                 throw new EmailAlreadyRegistered("Email ja esta em uso");
             }
 
-            dao.insert(entity);
+            var entitySaved = dao.insert(entity);
             connection.commit();
-            return entity;
+            return entitySaved;
         } catch (SQLException ex) {
             connection.rollback();
             throw ex;

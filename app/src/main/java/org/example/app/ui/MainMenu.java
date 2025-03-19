@@ -1,8 +1,11 @@
 package org.example.app.ui;
 
 import org.example.app.exception.EmailAlreadyRegistered;
+import org.example.app.persistence.entity.ServiceEntity;
 import org.example.app.persistence.entity.TutorEntity;
+import org.example.app.service.ServiceService;
 import org.example.app.service.TutorService;
+import org.example.app.utils.ListaServicos;
 
 import static org.example.app.persistence.config.ConnectionConfig.getConnection;
 
@@ -14,6 +17,7 @@ public class MainMenu {
     private TutorEntity loggedInUser = null;
 
     public void execute() throws SQLException {
+        createServices();
         System.out.println("Bem vindo a PetLandia! escolha uma das opções abaixo: ");
         var option = -1;
         while(true) {
@@ -81,7 +85,26 @@ public class MainMenu {
 
             System.out.println("Bem vindo " + loggedInUser.getName() + "!");
 
-            new OperationMenu().execute();
+            new OperationMenu(loggedInUser).execute();
+        }
+    }
+
+    public void createServices() throws SQLException {
+        try(var connection = getConnection()) {
+            var service = new ServiceService(connection);
+            var listaServicos = new ListaServicos().getServicos();
+
+            for (var s : listaServicos) {
+
+                if (service.existsByName(s.getName())) {
+                    continue;
+                }
+
+                var serviceEntity = new ServiceEntity();
+                serviceEntity.setName(s.getName());
+                serviceEntity.setPrice(s.getPrice());
+                service.create(serviceEntity);
+            }
         }
     }
 }
