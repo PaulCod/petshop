@@ -4,5 +4,4 @@ CREATE TABLE IF NOT EXISTS agendamento(
     id_cachorro BIGINT NOT NULL,
     status VARCHAR(20) NOT NULL,
     data_agendamento TIMESTAMP NOT NULL
-
 );

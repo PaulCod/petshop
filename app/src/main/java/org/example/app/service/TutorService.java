@@ -1,6 +1,7 @@
 package org.example.app.service;
 
 import lombok.AllArgsConstructor;
+import org.example.app.exception.EmailAlreadyRegistered;
 import org.example.app.persistence.dao.TutorDAO;
 import org.example.app.persistence.entity.TutorEntity;
 
@@ -15,6 +16,11 @@ public class TutorService {
     public TutorEntity create(final TutorEntity entity) throws SQLException {
         try {
             var dao = new TutorDAO(connection);
+
+            if(dao.existsByEmail(entity.getEmail())) {
+                throw new EmailAlreadyRegistered("Email ja esta em uso");
+            }
+
             dao.insert(entity);
             connection.commit();
             return entity;

@@ -1,202 +1,60 @@
-Mar 18, 2025 6:14:59 PM liquibase.changelog
+Mar 18, 2025 8:55:17 PM liquibase.changelog
 INFO: Reading resource: db/changelog/migrations/db.changelog-202503181719.sql
-Mar 18, 2025 6:14:59 PM liquibase.changelog
+Mar 18, 2025 8:55:17 PM liquibase.changelog
 INFO: Reading resource: db/changelog/migrations/db.changelog-202503181803.sql
-Mar 18, 2025 6:14:59 PM liquibase.changelog
+Mar 18, 2025 8:55:17 PM liquibase.changelog
 INFO: Reading resource: db/changelog/migrations/db.changelog-202503181808.sql
-Mar 18, 2025 6:14:59 PM liquibase.changelog
+Mar 18, 2025 8:55:17 PM liquibase.changelog
 INFO: Reading resource: db/changelog/migrations/db.changelog-202503181811.sql
-Mar 18, 2025 6:14:59 PM liquibase.changelog
+Mar 18, 2025 8:55:17 PM liquibase.changelog
 INFO: Reading from petshop.DATABASECHANGELOG
-Mar 18, 2025 6:14:59 PM liquibase.lockservice
+Mar 18, 2025 8:55:17 PM liquibase.lockservice
 INFO: Successfully acquired change log lock
-Mar 18, 2025 6:14:59 PM liquibase.command
-INFO: Using deploymentId: 2332499945
-Mar 18, 2025 6:14:59 PM liquibase.changelog
+Mar 18, 2025 8:55:17 PM liquibase.command
+INFO: Using deploymentId: 2342117722
+Mar 18, 2025 8:55:17 PM liquibase.changelog
 INFO: Reading from petshop.DATABASECHANGELOG
 Running Changeset: db/changelog/migrations/db.changelog-202503181803.sql::raw::includeAll
-Mar 18, 2025 6:14:59 PM liquibase.changelog
-SEVERE: ChangeSet db/changelog/migrations/db.changelog-202503181803.sql::raw::includeAll encountered an exception.
-liquibase.exception.DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
-)' at line 6 [Failed SQL: (1064) CREATE TABLE IF NOT EXISTS cachorro(
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(200) NOT NULL,
-    age INT NOT NULL,
-    tutor_id BIGINT NOT NULL,
-    CONSTRAINT tutor_dog_fk FOREIGN KEY(tutor_id) REFERENCES tutor(id) ON DELETE CASCADE;
-);]
-	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:476)
-	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:83)
-	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:185)
-	at liquibase.executor.AbstractExecutor.execute(AbstractExecutor.java:141)
-	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1189)
-	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:775)
-	at liquibase.changelog.visitor.UpdateVisitor.executeAcceptedChange(UpdateVisitor.java:119)
-	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:68)
-	at liquibase.changelog.ChangeLogIterator.lambda$run$0(ChangeLogIterator.java:131)
-	at liquibase.Scope.lambda$child$0(Scope.java:191)
-	at liquibase.Scope.child(Scope.java:200)
-	at liquibase.Scope.child(Scope.java:190)
-	at liquibase.Scope.child(Scope.java:169)
-	at liquibase.changelog.ChangeLogIterator.lambda$run$1(ChangeLogIterator.java:120)
-	at liquibase.Scope.lambda$child$0(Scope.java:191)
-	at liquibase.Scope.child(Scope.java:200)
-	at liquibase.Scope.child(Scope.java:190)
-	at liquibase.Scope.child(Scope.java:169)
-	at liquibase.Scope.child(Scope.java:257)
-	at liquibase.Scope.child(Scope.java:261)
-	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:89)
-	at liquibase.command.core.AbstractUpdateCommandStep.lambda$run$0(AbstractUpdateCommandStep.java:113)
-	at liquibase.Scope.lambda$child$0(Scope.java:191)
-	at liquibase.Scope.child(Scope.java:200)
-	at liquibase.Scope.child(Scope.java:190)
-	at liquibase.Scope.child(Scope.java:169)
-	at liquibase.command.core.AbstractUpdateCommandStep.run(AbstractUpdateCommandStep.java:111)
-	at liquibase.command.core.UpdateCommandStep.run(UpdateCommandStep.java:105)
-	at liquibase.command.CommandScope.execute(CommandScope.java:220)
-	at liquibase.Liquibase.lambda$update$0(Liquibase.java:216)
-	at liquibase.Scope.lambda$child$0(Scope.java:191)
-	at liquibase.Scope.child(Scope.java:200)
-	at liquibase.Scope.child(Scope.java:190)
-	at liquibase.Scope.child(Scope.java:169)
-	at liquibase.Liquibase.runInScope(Liquibase.java:1290)
-	at liquibase.Liquibase.update(Liquibase.java:205)
-	at liquibase.Liquibase.update(Liquibase.java:188)
-	at liquibase.Liquibase.update(Liquibase.java:175)
-	at liquibase.Liquibase.update(Liquibase.java:155)
-	at org.example.app.persistence.migration.MigrationStrategy.executeMigration(MigrationStrategy.java:37)
-	at org.example.app.App.main(App.java:17)
-Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
-)' at line 6
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
-	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
-	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:470)
-	... 40 more
-
+Mar 18, 2025 8:55:18 PM liquibase.changelog
+INFO: Custom SQL executed
+Mar 18, 2025 8:55:18 PM liquibase.changelog
+INFO: ChangeSet db/changelog/migrations/db.changelog-202503181803.sql::raw::includeAll ran successfully in 992ms
+Running Changeset: db/changelog/migrations/db.changelog-202503181808.sql::raw::includeAll
+Mar 18, 2025 8:55:19 PM liquibase.changelog
+INFO: Custom SQL executed
+Mar 18, 2025 8:55:19 PM liquibase.changelog
+INFO: ChangeSet db/changelog/migrations/db.changelog-202503181808.sql::raw::includeAll ran successfully in 797ms
+Running Changeset: db/changelog/migrations/db.changelog-202503181811.sql::raw::includeAll
+Mar 18, 2025 8:55:20 PM liquibase.changelog
+INFO: Custom SQL executed
+Mar 18, 2025 8:55:20 PM liquibase.changelog
+INFO: ChangeSet db/changelog/migrations/db.changelog-202503181811.sql::raw::includeAll ran successfully in 780ms
 
 UPDATE SUMMARY
-Run:                          0
+Run:                          3
 Previously run:               1
 Filtered out:                 0
 -------------------------------
 Total change sets:            4
 
-Mar 18, 2025 6:15:00 PM liquibase.util
+Mar 18, 2025 8:55:21 PM liquibase.util
 INFO: UPDATE SUMMARY
-Mar 18, 2025 6:15:00 PM liquibase.util
-INFO: Run:                          0
-Mar 18, 2025 6:15:00 PM liquibase.util
+Mar 18, 2025 8:55:21 PM liquibase.util
+INFO: Run:                          3
+Mar 18, 2025 8:55:21 PM liquibase.util
 INFO: Previously run:               1
-Mar 18, 2025 6:15:00 PM liquibase.util
+Mar 18, 2025 8:55:21 PM liquibase.util
 INFO: Filtered out:                 0
-Mar 18, 2025 6:15:00 PM liquibase.util
+Mar 18, 2025 8:55:21 PM liquibase.util
 INFO: -------------------------------
-Mar 18, 2025 6:15:00 PM liquibase.util
+Mar 18, 2025 8:55:21 PM liquibase.util
 INFO: Total change sets:            4
-Mar 18, 2025 6:15:00 PM liquibase.util
+Mar 18, 2025 8:55:21 PM liquibase.util
 INFO: Update summary generated
-Mar 18, 2025 6:15:00 PM liquibase.command
-INFO: Update command encountered an exception.
-Mar 18, 2025 6:15:00 PM liquibase.lockservice
+Mar 18, 2025 8:55:21 PM liquibase.command
+INFO: Update command completed successfully.
+Liquibase: Update has been successful. Rows affected: 3
+Mar 18, 2025 8:55:21 PM liquibase.lockservice
 INFO: Successfully released change log lock
-Mar 18, 2025 6:15:00 PM liquibase.command
-INFO: Logging exception.
-ERROR: Exception Details
-ERROR: Exception Primary Class:  SQLSyntaxErrorException
-ERROR: Exception Primary Reason:  You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
-)' at line 6
-ERROR: Exception Primary Source:  MySQL 9.2.0
-Mar 18, 2025 6:15:00 PM liquibase.command
+Mar 18, 2025 8:55:21 PM liquibase.command
 INFO: Command execution complete
-liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/migrations/db.changelog-202503181803.sql::raw::includeAll:
-     Reason: liquibase.exception.DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
-)' at line 6 [Failed SQL: (1064) CREATE TABLE IF NOT EXISTS cachorro(
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(200) NOT NULL,
-    age INT NOT NULL,
-    tutor_id BIGINT NOT NULL,
-    CONSTRAINT tutor_dog_fk FOREIGN KEY(tutor_id) REFERENCES tutor(id) ON DELETE CASCADE;
-);]
-	at liquibase.command.CommandScope.execute(CommandScope.java:258)
-	at liquibase.Liquibase.lambda$update$0(Liquibase.java:216)
-	at liquibase.Scope.lambda$child$0(Scope.java:191)
-	at liquibase.Scope.child(Scope.java:200)
-	at liquibase.Scope.child(Scope.java:190)
-	at liquibase.Scope.child(Scope.java:169)
-	at liquibase.Liquibase.runInScope(Liquibase.java:1290)
-	at liquibase.Liquibase.update(Liquibase.java:205)
-	at liquibase.Liquibase.update(Liquibase.java:188)
-	at liquibase.Liquibase.update(Liquibase.java:175)
-	at liquibase.Liquibase.update(Liquibase.java:155)
-	at org.example.app.persistence.migration.MigrationStrategy.executeMigration(MigrationStrategy.java:37)
-	at org.example.app.App.main(App.java:17)
-Caused by: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/migrations/db.changelog-202503181803.sql::raw::includeAll:
-     Reason: liquibase.exception.DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
-)' at line 6 [Failed SQL: (1064) CREATE TABLE IF NOT EXISTS cachorro(
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(200) NOT NULL,
-    age INT NOT NULL,
-    tutor_id BIGINT NOT NULL,
-    CONSTRAINT tutor_dog_fk FOREIGN KEY(tutor_id) REFERENCES tutor(id) ON DELETE CASCADE;
-);]
-	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:148)
-	at liquibase.command.core.AbstractUpdateCommandStep.lambda$run$0(AbstractUpdateCommandStep.java:113)
-	at liquibase.Scope.lambda$child$0(Scope.java:191)
-	at liquibase.Scope.child(Scope.java:200)
-	at liquibase.Scope.child(Scope.java:190)
-	at liquibase.Scope.child(Scope.java:169)
-	at liquibase.command.core.AbstractUpdateCommandStep.run(AbstractUpdateCommandStep.java:111)
-	at liquibase.command.core.UpdateCommandStep.run(UpdateCommandStep.java:105)
-	at liquibase.command.CommandScope.execute(CommandScope.java:220)
-	... 12 more
-Caused by: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/migrations/db.changelog-202503181803.sql::raw::includeAll:
-     Reason: liquibase.exception.DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
-)' at line 6 [Failed SQL: (1064) CREATE TABLE IF NOT EXISTS cachorro(
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(200) NOT NULL,
-    age INT NOT NULL,
-    tutor_id BIGINT NOT NULL,
-    CONSTRAINT tutor_dog_fk FOREIGN KEY(tutor_id) REFERENCES tutor(id) ON DELETE CASCADE;
-);]
-	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:819)
-	at liquibase.changelog.visitor.UpdateVisitor.executeAcceptedChange(UpdateVisitor.java:119)
-	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:68)
-	at liquibase.changelog.ChangeLogIterator.lambda$run$0(ChangeLogIterator.java:131)
-	at liquibase.Scope.lambda$child$0(Scope.java:191)
-	at liquibase.Scope.child(Scope.java:200)
-	at liquibase.Scope.child(Scope.java:190)
-	at liquibase.Scope.child(Scope.java:169)
-	at liquibase.changelog.ChangeLogIterator.lambda$run$1(ChangeLogIterator.java:120)
-	at liquibase.Scope.lambda$child$0(Scope.java:191)
-	at liquibase.Scope.child(Scope.java:200)
-	at liquibase.Scope.child(Scope.java:190)
-	at liquibase.Scope.child(Scope.java:169)
-	at liquibase.Scope.child(Scope.java:257)
-	at liquibase.Scope.child(Scope.java:261)
-	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:89)
-	... 20 more
-Caused by: liquibase.exception.DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
-)' at line 6 [Failed SQL: (1064) CREATE TABLE IF NOT EXISTS cachorro(
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(200) NOT NULL,
-    age INT NOT NULL,
-    tutor_id BIGINT NOT NULL,
-    CONSTRAINT tutor_dog_fk FOREIGN KEY(tutor_id) REFERENCES tutor(id) ON DELETE CASCADE;
-);]
-	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:476)
-	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:83)
-	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:185)
-	at liquibase.executor.AbstractExecutor.execute(AbstractExecutor.java:141)
-	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1189)
-	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:775)
-	... 35 more
-Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';
-)' at line 6
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
-	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
-	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:470)
-	... 40 more

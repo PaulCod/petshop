@@ -6,6 +6,6 @@ import lombok.Data;
 public class CachorroEntity {
     private Long id;
     private String name;
-    private String age;
+    private int age;
     private TutorEntity tutorEntity;
 }
